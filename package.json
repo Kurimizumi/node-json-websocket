@@ -1,29 +1,17 @@
 {
-  "name": "json-socket",
-  "description": "An easy way to send JSON over TCP using sockets.",
+  "name": "json-websocket",
+  "description": "An easy way to send JSON over websockets.",
   "main": "index.js",
-  "author": "Sebastian Seilund",
-  "version": "0.1.2",
+  "author": "Kurimizumi",
+  "version": "0.0.1",
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "http://github.com/sebastianseilund/node-json-socket.git"
+    "url": "http://github.com/Kurimizumi/node-json-websocket.git"
   },
   "bugs": {
-    "url": "http://github.com/sebastianseilund/node-json-socket/issues"
+    "url": "http://github.com/Kurimizumi/node-json-websocket/issues"
   },
-  "maintainers": [
-    {
-      "name": "Sebastian Seilund",
-      "email": "sebastian@seilund.com",
-      "url": "http://www.sebastianseilund.com"
-    }
-  ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/sebastianseilund/node-json-socket/raw/master/LICENSE"
-    }
-  ],
   "dependencies": {
     "async": "0.1.x",
     "nodejs-websocket": "^1.6.0"
