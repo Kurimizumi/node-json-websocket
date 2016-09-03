@@ -85,8 +85,8 @@ const delegates = [
   'once'
 ];
 delegates.forEach(function(method) {
-  JsonSocket.prototype[method] = function() {
+  JsonWebSocket.prototype[method] = function() {
     this._socket[method].apply(this._socket, arguments);
     return this;
-  }
+  };
 });
