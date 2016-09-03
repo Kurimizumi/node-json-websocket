@@ -1,5 +1,4 @@
 'use strict';
-const ws = require('nodejs-websocket');
 
 const JsonWebSocket = function(socket) {
   this._socket = socket;
@@ -83,6 +82,11 @@ JsonWebSocket.prototype = {
 
 const delegates = [
   'on',
-  'once',
-  ''
+  'once'
 ];
+delegates.forEach(function(method) {
+  JsonSocket.prototype[method] = function() {
+    this._socket[method].apply(this._socket, arguments);
+    return this;
+  }
+});
