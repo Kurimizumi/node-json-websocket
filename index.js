@@ -6,6 +6,11 @@ const JsonWebSocket = function(socket) {
   socket.on('close', this._onClose.bind(this));
   socket.on('text', this._onMessage.bind(this));
   socket.on('error', this._onError.bind(this));
+  if(this._socket.sendMessage == null) {
+    this._socket.sendMessage = function() {
+      this._socket.sendText.apply(this._socket, arguments);
+    }
+  }
 };
 
 module.exports = JsonWebSocket;
